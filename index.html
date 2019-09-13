@@ -1,15 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Greek gods</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="utf-8">
+  <title>UFO Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
-    <div id="plot"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
-    <script src="plots.js"></script>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">UFO Sightings
+            <img class="nav-ufo" src="static/images/ufo.svg">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>UFO Sightings</h1>
+      <p>The Truth is Out There</p>
+    </div>
+    <div class="row m-2">
+      <div class="col-md-2 ml-4 mt-4 border border-light">
+        <h5> Filter the table data for specific values:</h5>
+        <br>
+        <div class="form-group">
+          <input type="text" class="form-control mb-4" id="date" placeholder="Date: 1/11/2011">
+          <input type="text" class="form-control mb-4" id="city" placeholder="City">
+          <input type="text" class="form-control mb-4" id="state" placeholder="State">
+          <input type="text" class="form-control mb-4" id="country" placeholder="Country">
+          <input type="text" class="form-control mb-4" id="shape" placeholder="Shape">
+          <a id="search" class="btn btn-danger">Search</a>
+          <a id="reset" class="btn btn-secondary ml-2">RESET</a>
+        </div>
+      </div>
+      <div class="col-md-9 ml-4 mt-4 border border-light">
+        <p>UFO Sightings Table:</p>
+        <table class="table table-lg table-striped table-bordered table-responsive text-light bg-blue" id="table_id" data-page-length='25'>
+          <thead>
+            <tr class="head">
+              <th scope="col">Date</th>
+              <th scope="col">City</th>
+              <th scope="col">State</th>
+              <th scope="col">Country</th>
+              <th scope="col">Shape</th>
+              <th scope="col">Minutes</th>
+              <th scope="col">Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">UFO Sightings</span>
+    </footer>
+  </div>
+  <!-- jQuery library -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <!-- table jquery -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.11.0/d3.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3plus/1.9.8/d3plus.min.js"></script>
+  <script src="static/js/data.js" type="text/javascript"></script>
+  <script src="static/js/app.js"> type="text/javascript"></script>
+  
+  
 </body>
+
 </html>
